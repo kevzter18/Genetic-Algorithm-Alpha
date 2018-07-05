@@ -5,6 +5,9 @@
  */
 package geneticalgorithmdemo;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 /**
  *
  * @author Kevin James T Kramer
