@@ -65,6 +65,14 @@ public class Faculty {
             return timeslot;
         }
 
+    public void setLoad(ArrayList<String> load) {
+        this.load = load;
+    }
+
+    public void setTimeslot(Timeslot timeslot) {
+        this.timeslot = timeslot;
+    }
+
       
 
     }
