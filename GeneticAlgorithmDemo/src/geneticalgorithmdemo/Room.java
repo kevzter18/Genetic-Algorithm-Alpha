@@ -5,6 +5,8 @@
  */
 package geneticalgorithmdemo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Kevin James T Kramer
@@ -15,16 +17,16 @@ public class Room {
 	protected String roomCode;// (G102)
 	protected int roomtype; //(Computer Lab, Lecture)
 	protected String location; //(Taft, STC)
-        protected int Timeslot;// (contains offeringID)
+        protected ArrayList<Timeslot> timeslots;   // (contains offeringID)
 
    
 
-    public Room(int roomID, String roomCode, int roomtype, String location, int Timeslot) {
+    public Room(int roomID, String roomCode, int roomtype, String location) {
         this.roomID = roomID;
         this.roomCode = roomCode;
         this.roomtype = roomtype;
         this.location = location;
-        this.Timeslot = Timeslot;
+       
     }
 
 
@@ -60,11 +62,14 @@ public class Room {
         return location;
     }
 
-    public int getTimeslot() {
-        return Timeslot;
+    public ArrayList<Timeslot> getTimeslots() {
+        return timeslots;
     }
-	 public void setTimeslot(int Timeslot) {
-        this.Timeslot = Timeslot;
+
+    public void setTimeslots(ArrayList<Timeslot> timeslots) {
+        this.timeslots = timeslots;
     }
+
+    
     
 }
