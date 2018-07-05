@@ -21,9 +21,39 @@ public class GeneticAlgorithmDemo {
         
         //Initializing Faculty members
         ArrayList<Faculty> facultyList = new ArrayList<Faculty>();
+        ArrayList<Timeslot> pTimeslots = new ArrayList<Timeslot>(); //Used to transfer preferred timeslots to faculty list
+        Timeslot pTimeslot = new Timeslot(0, 2); //Used to transfer to pTimeslots
+
         
+        //Adding Sir Solomon See
         Faculty professorA = new Faculty(151, "Solomon See", 12);
-        Faculty professorB = new Faculty(150, "Ryan Dimaunahan", 9);
+        professorA.addPreferredCourses("INTROSE");
+        professorA.addPreferredCourses("INTESYS");
+        professorA.addPreferredCourses("DASALGO");
+       
+        professorA.addPreferredTimeslots(pTimeslot);
+       pTimeslot.setDay(1);
+        pTimeslot.setTime(2);
+
+       
+        
+        pTimeslots.clear();
+        
+        //Test Print of data
+        System.out.println(professorA.getFaculty());
+        System.out.println(professorA.getName());
+        System.out.println(professorA.getUnits());
+        System.out.println(professorA.getPreferredCourses().get(0));
+        System.out.println(professorA.getPreferredCourses().get(1));
+        System.out.println(professorA.getPreferredCourses().get(2));
+         
+        System.out.println(professorA.getTimeslot().get(0).getDay());
+        System.out.println(professorA.getTimeslot().get(0).getTime());
+  
+         
+        //Adding Sir Ryan Dimaunahan
+        Faculty professorB = new Faculty(150, "Ryan Dimaunahan", 12);
+
         Faculty professorC = new Faculty(101, "Rafael Cabredo", 6);
         
         facultyList.add(professorA);

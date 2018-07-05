@@ -16,7 +16,7 @@ public class Faculty {
     protected int faculty;
     protected String name;
     protected int units;
-    protected int preferredCourse[];
+    protected ArrayList<String> preferredCourse;
     protected ArrayList<String> load;
     protected ArrayList<Timeslot> preferredTimeslots;
        
@@ -25,6 +25,8 @@ public class Faculty {
               this.faculty=faculty;
               this.name=name;
               this.units=units;
+              this.preferredCourse = new ArrayList<String>();
+              this.preferredTimeslots = new ArrayList<Timeslot>(); 
          }
    
         
@@ -56,22 +58,25 @@ public class Faculty {
             return load;
         }
 
-
-        public int[] getPreferredCourse() {
+        public void setLoad(ArrayList<String> load) {
+        this.load = load;
+        }
+        
+        public ArrayList<String> getPreferredCourses() {
             return preferredCourse;
+        }
+        
+        public void addPreferredCourses(String pCourse){
+             this.preferredCourse.add(pCourse);
         }
 
         public ArrayList<Timeslot> getTimeslot() {
             return preferredTimeslots;
         }
-
-    public void setLoad(ArrayList<String> load) {
-        this.load = load;
-    }
-
-    public void setTimeslots(ArrayList<Timeslot> timeslots) {
-        this.preferredTimeslots = timeslots;
-    }
+        
+        public void addPreferredTimeslots(Timeslot timeslots) {
+        this.preferredTimeslots.add(timeslots);
+        }
 
       
 

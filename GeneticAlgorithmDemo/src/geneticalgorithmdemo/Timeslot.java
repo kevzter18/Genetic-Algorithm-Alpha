@@ -11,23 +11,23 @@ package geneticalgorithmdemo;
  */
 public class Timeslot {
     //the Timeslot class has 2 fields
-    public int day;
-    public int time;
+    protected int day;
+    protected int time;
     
     // the Timeslot class has one constructor
     public Timeslot(int nDay, int nTime) {
-        day = nDay;
-        time = nTime;
+        this.day = nDay;
+        this.time = nTime;
         
     }
         
     // the Timeslot class has four methods
     public void setDay(int newValue) {
-      day = newValue;
+      this.day = newValue;
     }
         
     public void setTime(int newValue) {
-      time = newValue;
+      this.time = newValue;
     }
         
     public int getDay() {
