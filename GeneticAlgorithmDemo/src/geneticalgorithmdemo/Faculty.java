@@ -18,7 +18,7 @@ public class Faculty {
     protected int units;
     protected ArrayList<String> load;
     protected int preferredCourse[];
-    protected Timeslot timeslot;
+    protected ArrayList<Timeslot> preferredTimeslots;
        
     //constructor
         public Faculty(int faculty, String name, int units){
@@ -61,16 +61,16 @@ public class Faculty {
             return preferredCourse;
         }
 
-        public Timeslot getTimeslot() {
-            return timeslot;
+        public ArrayList<Timeslot> getTimeslot() {
+            return preferredTimeslots;
         }
 
     public void setLoad(ArrayList<String> load) {
         this.load = load;
     }
 
-    public void setTimeslot(Timeslot timeslot) {
-        this.timeslot = timeslot;
+    public void setTimeslots(ArrayList<Timeslot> timeslots) {
+        this.preferredTimeslots = timeslots;
     }
 
       
