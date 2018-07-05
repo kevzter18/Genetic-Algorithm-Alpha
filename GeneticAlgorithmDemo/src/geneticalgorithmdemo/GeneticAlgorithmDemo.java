@@ -18,7 +18,17 @@ public class GeneticAlgorithmDemo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        //initializing Faculty members
+        ArrayList<Faculty> facultyList = new ArrayList<Faculty>();
+        
+        Faculty professorA = new Faculty(151, "Solomon See", 12);
+        
+        
+        
+        ArrayList<Course> courseList = new ArrayList<Course>();
+        ArrayList<Room> roomList = new ArrayList<Room>();
+        
     }
     
 }
