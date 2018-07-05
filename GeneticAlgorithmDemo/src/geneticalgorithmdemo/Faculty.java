@@ -16,8 +16,8 @@ public class Faculty {
     protected int faculty;
     protected String name;
     protected int units;
-    protected ArrayList<String> load;
     protected int preferredCourse[];
+    protected ArrayList<String> load;
     protected ArrayList<Timeslot> preferredTimeslots;
        
     //constructor
