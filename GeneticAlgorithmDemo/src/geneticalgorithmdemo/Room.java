@@ -16,16 +16,16 @@ public class Room {
         protected int roomID;
 	protected String roomCode;// (G102)
 	protected int roomtype; //(Computer Lab, Lecture)
-	protected String location; //(Taft, STC)
+	// protected String location; (Taft, STC)
         protected ArrayList<Timeslot> timeslots;   // (contains offeringID)
 
    
 
-    public Room(int roomID, String roomCode, int roomtype, String location) {
+    public Room(int roomID, String roomCode, int roomtype) {
         this.roomID = roomID;
         this.roomCode = roomCode;
         this.roomtype = roomtype;
-        this.location = location;
+      //  this.location = location;
        
     }
 
@@ -41,11 +41,11 @@ public class Room {
     public void setRoomtype(int roomtype) {
         this.roomtype = roomtype;
     }
-
+    /*
     public void setLocation(String location) {
         this.location = location;
     }
-
+      */
     public int getRoomID() {
         return roomID;
     }
@@ -57,11 +57,11 @@ public class Room {
     public int getRoomtype() {
         return roomtype;
     }
-
+    /*
     public String getLocation() {
         return location;
     }
-
+    */
     public ArrayList<Timeslot> getTimeslots() {
         return timeslots;
     }
