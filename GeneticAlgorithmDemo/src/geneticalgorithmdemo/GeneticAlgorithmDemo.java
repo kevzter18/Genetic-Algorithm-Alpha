@@ -21,8 +21,7 @@ public class GeneticAlgorithmDemo {
         
         //Initializing Faculty members
         ArrayList<Faculty> facultyList = new ArrayList<Faculty>();
-        ArrayList<Timeslot> pTimeslots = new ArrayList<Timeslot>(); //Used to transfer preferred timeslots to faculty list
-        Timeslot pTimeslot = new Timeslot(0, 2); //Used to transfer to pTimeslots
+       
 
         
         //Adding Sir Solomon See
@@ -30,14 +29,13 @@ public class GeneticAlgorithmDemo {
         professorA.addPreferredCourses("INTROSE");
         professorA.addPreferredCourses("INTESYS");
         professorA.addPreferredCourses("DASALGO");
-       
-        professorA.addPreferredTimeslots(pTimeslot);
-       pTimeslot.setDay(1);
-        pTimeslot.setTime(2);
-
-       
-        
-        pTimeslots.clear();
+ 
+        for(int i = 0; i<3; i++){
+             Timeslot pTimeslot = new Timeslot(i, i); //Used to transfer to pTimeslot
+           
+             professorA.addPreferredTimeslots(pTimeslot);
+        }
+  
         
         //Test Print of data
         System.out.println(professorA.getFaculty());
@@ -49,8 +47,10 @@ public class GeneticAlgorithmDemo {
          
         System.out.println(professorA.getTimeslot().get(0).getDay());
         System.out.println(professorA.getTimeslot().get(0).getTime());
-  
-         
+        System.out.println(professorA.getTimeslot().get(1).getDay());
+        System.out.println(professorA.getTimeslot().get(1).getTime());
+         System.out.println(professorA.getTimeslot().get(2).getDay());
+        System.out.println(professorA.getTimeslot().get(2).getTime());
         //Adding Sir Ryan Dimaunahan
         Faculty professorB = new Faculty(150, "Ryan Dimaunahan", 12);
 
