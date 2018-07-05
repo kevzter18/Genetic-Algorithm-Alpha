@@ -13,40 +13,22 @@ import java.util.ArrayList;
  */
 public class Room {
     
-        protected int roomID;
+        protected String roomID;
 	protected String roomCode;// (G102)
-	protected int roomtype; //(Computer Lab, Lecture)
+	protected String roomtype; //(Computer Lab, Lecture)
 	// protected String location; (Taft, STC)
         protected ArrayList<Timeslot> timeslots;   // (contains offeringID)
 
    
 
-    public Room(int roomID, String roomCode, int roomtype) {
+    public Room(String roomID, String roomCode, String roomtype) {
         this.roomID = roomID;
         this.roomCode = roomCode;
-        this.roomtype = roomtype;
-      //  this.location = location;
-       
+        this.roomtype = roomtype;   
     }
-
-
-    public void setRoomID(int roomID) {
-        this.roomID = roomID;
-    }
-
-    public void setRoomCode(String roomCode) {
-        this.roomCode = roomCode;
-    }
-
-    public void setRoomtype(int roomtype) {
-        this.roomtype = roomtype;
-    }
-    /*
-    public void setLocation(String location) {
-        this.location = location;
-    }
-      */
-    public int getRoomID() {
+    
+    //GETTERS
+    public String getRoomID() {
         return roomID;
     }
 
@@ -54,16 +36,25 @@ public class Room {
         return roomCode;
     }
 
-    public int getRoomtype() {
+    public String getRoomtype() {
         return roomtype;
     }
-    /*
-    public String getLocation() {
-        return location;
-    }
-    */
+  
     public ArrayList<Timeslot> getTimeslots() {
         return timeslots;
+    }
+
+    //SETTERS
+    public void setRoomID(String roomID) {
+        this.roomID = roomID;
+    }
+
+    public void setRoomCode(String roomCode) {
+        this.roomCode = roomCode;
+    }
+
+    public void setRoomtype(String roomtype) {
+        this.roomtype = roomtype;
     }
 
     public void setTimeslots(ArrayList<Timeslot> timeslots) {

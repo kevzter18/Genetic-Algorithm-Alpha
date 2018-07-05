@@ -25,11 +25,11 @@ public class GeneticAlgorithmDemo {
 
         
         //Adding Sir Solomon See
-        Faculty professorA = new Faculty(151, "Solomon See", 12);
+        Faculty professorA = new Faculty("151", "Solomon See", 12);
         professorA.addPreferredCourses("INTROSE");
         professorA.addPreferredCourses("INTESYS");
         professorA.addPreferredCourses("DASALGO");
- 
+
         for(int i = 0; i<3; i++){
              Timeslot pTimeslot = new Timeslot(i, i); //Used to transfer to pTimeslot
            
@@ -52,9 +52,9 @@ public class GeneticAlgorithmDemo {
          System.out.println(professorA.getTimeslot().get(2).getDay());
         System.out.println(professorA.getTimeslot().get(2).getTime());
         //Adding Sir Ryan Dimaunahan
-        Faculty professorB = new Faculty(150, "Ryan Dimaunahan", 12);
+        Faculty professorB = new Faculty("150", "Ryan Dimaunahan", 12);
 
-        Faculty professorC = new Faculty(101, "Rafael Cabredo", 6);
+        Faculty professorC = new Faculty("101", "Rafael Cabredo", 6);
         
         facultyList.add(professorA);
         facultyList.add(professorB);

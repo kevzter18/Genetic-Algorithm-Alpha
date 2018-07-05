@@ -11,23 +11,41 @@ package geneticalgorithmdemo;
  */
 public class Offering {
     
-    protected int offeringID;
-    protected int course; //Course ID
-    protected int professor; //Professor ID
-    protected int room; //Room ID
+    protected String offeringID;
+    protected String courseID; //Course ID
+    protected String professorID; //Professor ID
+    protected String roomID; //Room ID
     protected Timeslot fTimeslot; //First Timeslot
     protected Timeslot sTimeslot; //Second Timeslot
     
-    public Offering (int offeringID, int course) {
+    public Offering (String offeringID, String courseID) {
        this.offeringID = offeringID;
-       this.course = course;
+       this.courseID = courseID;
     }
     
-    public void setProfessor(int professor){
-        this.professor = professor;
+    //GETTERS
+    public String getOfferingID (){
+        return offeringID;
     }
-     public void setRoom(int room){
-        this.room = room;
+    
+     public String getCourseID (){
+        return courseID;
+    }
+     
+    public String getProfessorID (){
+        return professorID;
+    }
+    
+     public String getRoomID (){
+        return roomID;
+    }
+     
+    //SETTERS
+    public void setProfessor(String professorID){
+        this.professorID = professorID;
+    }
+     public void setRoom(String roomID){
+        this.roomID = roomID;
     }
      
     public void setFTimeslot (Timeslot fTimeslot){
