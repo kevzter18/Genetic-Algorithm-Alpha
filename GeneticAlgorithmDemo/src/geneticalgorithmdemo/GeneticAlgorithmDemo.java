@@ -21,9 +21,12 @@ public class GeneticAlgorithmDemo {
         
         //Initializing Faculty members
         ArrayList<Faculty> facultyList = new ArrayList<Faculty>();
+        ArrayList<Timeslot> schedules = new ArrayList<Timeslot>();
         ArrayList<Timeslot> pTimeslots = new ArrayList<Timeslot>(); //Used to transfer preferred timeslots to faculty list
         Timeslot pTimeslot = new Timeslot(0, 2); //Used to transfer to pTimeslots
-
+        
+        
+        populateSchedules(schedules);
         
         //Adding Sir Solomon See
         Faculty professorA = new Faculty(151, "Solomon See", 12);
@@ -31,10 +34,11 @@ public class GeneticAlgorithmDemo {
         professorA.addPreferredCourses("INTESYS");
         professorA.addPreferredCourses("DASALGO");
        
-        professorA.addPreferredTimeslots(pTimeslot);
-       pTimeslot.setDay(1);
-        pTimeslot.setTime(2);
-
+        professorA.getTimeslot().add(pTimeslot);
+        
+        pTimeslot.setDay(3);
+        pTimeslot.setTime(1);
+    
        
         
         pTimeslots.clear();
@@ -60,7 +64,11 @@ public class GeneticAlgorithmDemo {
         facultyList.add(professorB);
         facultyList.add(professorC);
         //End of Faculty initialization
-        
+         for(int i=0; i< schedules.size();i++){
+     
+               System.out.println(schedules.get(i).day +""+ schedules.get(i).time );
+          
+      }
         
         ArrayList<Course> courseList = new ArrayList<Course>();
         ArrayList<Room> roomList = new ArrayList<Room>();
@@ -77,6 +85,16 @@ public class GeneticAlgorithmDemo {
     
     public void selectParent (ArrayList<ArrayList<Offering>> population){
         //made it void so it wouldn't be annoying 
+    }
+    
+    public static void populateSchedules(ArrayList<Timeslot> schedule){
+      for(int i=0; i< 5;i++){
+          for(int n=0;n<8; n++){
+                Timeslot pTimeslot = new Timeslot(i,n);
+               schedule.add(pTimeslot);
+          }
+      }
+    
     }
     
   
