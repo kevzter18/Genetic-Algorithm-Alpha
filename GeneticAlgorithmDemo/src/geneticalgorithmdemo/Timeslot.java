@@ -20,8 +20,17 @@ public class Timeslot {
         this.time = nTime;
         
     }
+    
+    //GETTERS
+    public int getDay() {
+    return day;
+    }
         
-    // the Timeslot class has four methods
+    public int getTime() {
+    return time;
+    }
+   
+    //SETTERS
     public void setDay(int newValue) {
       this.day = newValue;
     }
@@ -30,11 +39,5 @@ public class Timeslot {
       this.time = newValue;
     }
         
-    public int getDay() {
-    return day;
-    }
-        
-    public int getTime() {
-    return time;
-    }
+ 
 }

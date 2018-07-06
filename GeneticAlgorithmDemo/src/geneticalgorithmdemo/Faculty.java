@@ -17,7 +17,7 @@ public class Faculty {
     protected String name;
     protected int units;
     protected ArrayList<String> load;
-    protected ArrayList<String> preferredCourse;
+    protected ArrayList<String> preferredCourses;
     protected ArrayList<Timeslot> preferredTimeslots;
        
     //constructor
@@ -25,13 +25,13 @@ public class Faculty {
               this.facultyID=facultyID;
               this.name=name;
               this.units=units;
-              this.preferredCourse = new ArrayList<String>();
+              this.preferredCourses = new ArrayList<String>();
               this.preferredTimeslots = new ArrayList<Timeslot>(); 
          }
    
         //GETTERS
         
-        public String getFaculty() {
+        public String getFacultyID() {
             return facultyID;
         }
         public String getName() {
@@ -44,14 +44,14 @@ public class Faculty {
             return load;
         }
         public ArrayList<String> getPreferredCourses() {
-            return preferredCourse;
+            return preferredCourses;
         }
-          public ArrayList<Timeslot> getTimeslot() {
+          public ArrayList<Timeslot> getTimeslots() {
             return preferredTimeslots;
         }
           
         //SETTERS
-        public void setFaculty(String facultyID) {
+        public void setFacultyID(String facultyID) {
             this.facultyID = facultyID;
         }
 
@@ -66,13 +66,13 @@ public class Faculty {
         }
 
        
-        public void setLoad(ArrayList<String> load) {
-        this.load = load;
+        public void addToLoad(String load) {
+        this.load.add(load);
         }
         
     
         public void addPreferredCourses(String pCourse){
-             this.preferredCourse.add(pCourse);
+             this.preferredCourses.add(pCourse);
         }
 
       
