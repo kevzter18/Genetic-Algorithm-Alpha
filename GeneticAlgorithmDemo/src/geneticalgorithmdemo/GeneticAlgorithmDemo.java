@@ -154,7 +154,7 @@ public class GeneticAlgorithmDemo {
           //End of Room initialization
           
           //Initializing Blocks
-          ArrayList<Block> blockList = new ArrayList<Block>();
+          ArrayList<Block> blockList = new ArrayList<>();
           Block tempBlock;
           
            for(int i = 0; i<2; i++){
@@ -175,10 +175,41 @@ public class GeneticAlgorithmDemo {
          */
           
            
-         //GENERATING POPULATION 
-         ArrayList<Offering> tempOffering;
+         //Initializating Offerings
          ArrayList<ArrayList<Offering>> population = new ArrayList<>();
+         ArrayList<Offering> tempOfferingList = new ArrayList<>();
+         Offering tempOffering;
+         
         
+         for(int i = 0; i<8; i++){
+             switch(tempOfferingList.size()){
+                 case 0: tempOffering = new Offering("1000", "1500", "S17");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 1: tempOffering = new Offering("1001", "1500", "S18");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 2: tempOffering = new Offering("1002", "1515", "S17");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 3: tempOffering = new Offering("1003", "1515", "S18");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 4: tempOffering = new Offering("1004", "1611", "S17");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 5: tempOffering = new Offering("1005", "1611", "S18");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 6: tempOffering = new Offering("1006", "1516", "S17");
+                         tempOfferingList.add(tempOffering);
+                        break;
+                 case 7: tempOffering = new Offering("1007", "1516", "S18");
+                         tempOfferingList.add(tempOffering);
+                        break;   
+             }  
+         }
+         
     }
     
     public double fitnessFunction(ArrayList<Offering> member){

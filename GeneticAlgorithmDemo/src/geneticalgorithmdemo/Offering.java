@@ -13,14 +13,16 @@ public class Offering {
     
     protected String offeringID;
     protected String courseID; //Course ID
-    protected String professorID; //Professor ID
+    protected String blockID;
+    protected String facultyID; //Professor ID
     protected String roomID; //Room ID
     protected Timeslot fTimeslot; //First Timeslot
     protected Timeslot sTimeslot; //Second Timeslot
     
-    public Offering (String offeringID, String courseID) {
+    public Offering (String offeringID, String courseID, String blockID) {
        this.offeringID = offeringID;
        this.courseID = courseID;
+       this.blockID = blockID;
     }
     
     //GETTERS
@@ -28,12 +30,16 @@ public class Offering {
         return offeringID;
     }
     
+    public String getBlockID (){
+        return offeringID;
+    }
+    
      public String getCourseID (){
         return courseID;
     }
      
-    public String getProfessorID (){
-        return professorID;
+    public String getFacultyID (){
+        return facultyID;
     }
     
      public String getRoomID (){
@@ -41,8 +47,8 @@ public class Offering {
     }
      
     //SETTERS
-    public void setProfessor(String professorID){
-        this.professorID = professorID;
+    public void setFacultyID(String professorID){
+        this.facultyID = professorID;
     }
      public void setRoom(String roomID){
         this.roomID = roomID;
