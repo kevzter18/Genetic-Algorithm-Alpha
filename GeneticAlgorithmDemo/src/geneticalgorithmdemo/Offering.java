@@ -23,6 +23,10 @@ public class Offering {
        this.offeringID = offeringID;
        this.courseID = courseID;
        this.blockID = blockID;
+       this.facultyID = "000";
+       this.roomID = "0000";
+       this.fTimeslot = new Timeslot(9,9);
+       this.sTimeslot = new Timeslot(9,9);
     }
     
     //GETTERS
@@ -46,6 +50,23 @@ public class Offering {
         return roomID;
     }
      
+     public Timeslot getFTimeslot(){
+         return fTimeslot;
+     }
+     
+     public Timeslot getSTimeslot(){
+         return sTimeslot;
+     } 
+     public boolean getIsFull(){
+
+         if(!roomID.equals("0000") && !facultyID.equals("000") && sTimeslot.getDay() != 9 && sTimeslot.getTime() != 9 && fTimeslot.getDay() != 9 && fTimeslot.getTime() != 9){
+          return true;
+         }
+        
+         else
+             return false;
+         
+     }
     //SETTERS
     public void setFacultyID(String professorID){
         this.facultyID = professorID;

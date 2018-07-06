@@ -14,9 +14,7 @@ import java.util.Random;
  */
 public class GeneticAlgorithmDemo {
 
-    /**
-     * @param args the command line arguments
-     */
+     
     public static void main(String[] args) {
         Timeslot tempTimeslot;
         
@@ -177,11 +175,12 @@ public class GeneticAlgorithmDemo {
            
          //Initializating Offerings
          ArrayList<ArrayList<Offering>> population = new ArrayList<>();
-         ArrayList<Offering> tempOfferingList = new ArrayList<>();
+         ArrayList<Offering> tempOfferingList;
          Offering tempOffering;
          
-        
-         for(int i = 0; i<8; i++){
+        for (int i = 0; i < 100; i++){
+            tempOfferingList = new ArrayList<>();
+             for(int j = 0; j<8; j++){
              switch(tempOfferingList.size()){
                  case 0: tempOffering = new Offering("1000", "1500", "S17");
                          tempOfferingList.add(tempOffering);
@@ -209,14 +208,43 @@ public class GeneticAlgorithmDemo {
                         break;   
              }  
          }
+            population.add(tempOfferingList);
+        }
+        /*TEST PRINTING OF OFFERINGS 
+        System.out.println(population.size());
+        System.out.println(population.get(0).get(0).getCourseID());
+        System.out.println(population.get(0).get(1).getCourseID());
+        System.out.println(population.get(0).get(2).getCourseID());
+        System.out.println(population.get(1).get(1).getCourseID());
+        */
+        //End of Initialization
+        
+        //Generating Population
+        for (int i = 0; i<100; i++){
+            populate(population.get(i), blockList, roomList, facultyList, courseList);
+        }
          
     }
-    
+    public static void  populate(ArrayList<Offering> member, ArrayList<Block> blocks, ArrayList<Room> rooms, ArrayList<Faculty> faculty, ArrayList<Course> courses){
+      int lowestUnits = 0;
+      int lowestLoad = 0;
+      int count = 0;
+      while(member.get(0).getIsFull() != true && member.get(1).getIsFull() != true && member.get(2).getIsFull() != true && member.get(3).getIsFull() != true && member.get(4).getIsFull() != true && member.get(5).getIsFull() != true && member.get(6).getIsFull() != true && member.get(7).getIsFull() != true){
+          //Choose a faculty member
+           System.out.println("monkey");
+          for(int i = 0; i<3; i++){
+              for(int j = 0; j<lowestLoad; j++){
+                  
+              }
+          }
+         
+    }
+    }
     public double fitnessFunction(ArrayList<Offering> member){
        double test =  50.4;
         return test;
     }
-    public void sortPopulation (ArrayList<ArrayList<Offering>> population){
+    public static void sortPopulation (ArrayList<ArrayList<Offering>> population){
         
     }
     
